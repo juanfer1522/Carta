@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title></title>
+ <style>
+ body { margin: 0; font-family: Arial, sans-serif; background: #ffeef4; color: #4a2432; display: grid; place-items: center; min-height: 100vh; }
+ .card { width: min(90%, 460px); padding: 28px; background: white; border-radius: 18px; box-shadow: 0 8px 25px #c98b9b55; text-align: center; }
+ h1 { color: #c4476a; }
+ label { display: block; margin: 18px 0 8px; text-align: left; font-weight: bold; }
+ input, select, button { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #e2a5b5; border-radius: 9px; font-size: 1rem; }
+ button { margin-top: 22px; background: #c4476a; color: white; border: 0; cursor: pointer; }
+ button:hover { background: #a93656; }
+ #carta { display: none; margin-top: 24px; padding: 24px; background: #fff5d7; border-radius: 12px; line-height: 1.6; }
+ </style>
+</head>
+<body>
+ <main class="card">
+ <section id="cuestionario">
+ <h1>adivina adivinador 💌</h1>
+<p>Responde para descubrir tu cartica</p>
+ <form id="formulario">
+<label for="clave">Día que nos conocimos + día de tu cumpleaños dividido en 5 ¡¡¡</label>
+ <input id="clave" required type="number" placeholder="Pon la respuesta aquí ñañañañ"> 
+ <button type="submit">Abrir mi carta</button>
+ </form>
+ </section>
+
+<section id="carta" aria-live="polite">
+<h2>Te amo tefany <333❤️ </h2>
+<p>Escoji 8 por las 8 letras de tu nombre que representan mucho lo que eres </p> 
+ <p> E: extravagante, S : Supernovia, T : tierna </p>
+ <p> E: enana, F : furiosa, A : alegre </p>
+ <p> N : noble, y : yguana</p>
+ <p style="opacity: 0.2; position: relative; top: -21px ;right: 27.3px "> negra </p> 
+ <p>Te amo mucho mi ❤️amor❤️ eres la mejor <br> gracias por estar en mi vida siempre quiero estar contigo
+ <br> de verdad que eres una de las personas que mas amo <br> y me has hecho aprender mucho de mi 
+<br> te amo mucho y jamas quisiera perder te quiero hasta que seamos unas pasas te amo muchoooo<br><strong>ATT JF</strong></p>
+ </section>
+ </main>
+ <script>
+ document.getElementById('formulario').addEventListener('submit', function (evento) {
+// Evita que la página se recargue al enviar el formulario
+ evento.preventDefault();
+
+ // Obtenemos el valor que escribió la persona
+ const respuesta = document.getElementById('clave').value;
+
+ // Verificamos si la respuesta es 8
+ if (respuesta === "8") {
+// Si es correcta, ocultamos el formulario y mostramos la carta
+document.getElementById('cuestionario').style.display = 'none';
+document.getElementById('carta').style.display = 'block';
+ } else {
+// Si es incorrecta, mostramos un mensaje de error
+alert("ñao ñao 🥚🗿");
+ }
+ });
+ </script>
+</body>
+</html>
